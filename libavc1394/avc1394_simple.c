@@ -549,8 +549,7 @@ avc1394_init_target( raw1394handle_t handle, avc1394_command_handler_t cmd_handl
 	if (cmd_handler == NULL)
 		return -1;
 	g_command_handler = cmd_handler;
-	if (raw1394_set_fcp_handler( handle, target_fcp_handler ) < 0)
-		return -1;
+	raw1394_set_fcp_handler( handle, target_fcp_handler );
 	return raw1394_start_fcp_listen( handle );
 }
 
