@@ -284,7 +284,7 @@ int unit_status( avc1394_cmd_rsp *cr )
 	case AVC1394_CMD_UNIT_INFO:
 		cr->status = AVC1394_RESP_STABLE;
 		cr->operand[0] = AVC1394_OPERAND_UNIT_INFO_EXTENSION_CODE;
-		cr->operand[1] = AVC1394_SUBUNIT_TAPE_RECORDER;
+		cr->operand[1] = AVC1394_SUBUNIT_TAPE_RECORDER << 3;
 		break;
 	case AVC1394_CMD_SUBUNIT_INFO:
 	{
